@@ -8,6 +8,7 @@ const reducer = (state = initialState, action) => {
 
     switch (action.type) {
         case actionTypes.STORE_RESULT:
+            // make changes to the state here not in the action creator
             return {
                 ...state,
                 results: state.results.concat({id: new Date(), value: action.result})

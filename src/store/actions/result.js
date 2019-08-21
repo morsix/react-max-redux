@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
 
 export const saveResult = ( res ) =>{
+   // const updatedResult = res * 2; DON'T update state here the recomended way is to do it in the reducer
     return {
         type: actionTypes.STORE_RESULT,
         result: res
