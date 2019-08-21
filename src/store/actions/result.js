@@ -9,8 +9,11 @@ export const saveResult = ( res ) =>{
 }
 
 export const storeResult = (res) => {
-    return dispatch => {
+    return (dispatch, getState) => {
         setTimeout( () => {
+            // You can access state here but it's best to send it over params instead. 
+            // const oldCounter = getState().ctr.counter;
+            // console.log(oldCounter)
             dispatch(saveResult(res))
         },2000);
     }
